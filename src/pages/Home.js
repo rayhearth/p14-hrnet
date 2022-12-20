@@ -5,10 +5,10 @@ const Home = () => {
     return (
         <div className='home'>
             <h1>Hello world</h1>
+            {/* <section className='form-container'>
+                <Form />
+            </section> */}
         </div>
-        <section className='form-container'>
-<Form/>
-        </section>
     );
 };
 

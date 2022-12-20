@@ -6,6 +6,10 @@ const Header = () => {
 
     let navigate = useNavigate()
 
+    const home = () => {
+        navigate('/home')
+    }
+
     const create = () => {
         navigate('/create-employee')
     }
@@ -17,15 +21,14 @@ const Header = () => {
     return (
         <header>
             <nav className="main-nav">
-                <Link to='/' className="main-nav-logo">
-                    <img
-                        className="main-nav-logo-image"
-                        src={process.env.PUBLIC_URL + 'icon.png'}
-                        alt="HRnet Logo"
-                    />
-                </Link>
-
                 <ul className='linkContent'>
+                    <li className="main-nav-item" onClick={home}>
+                        <img
+                            className="main-nav-logo-image"
+                            src={process.env.PUBLIC_URL + 'icon.png'}
+                            alt="HRnet Logo"
+                        />
+                    </li>
                     <li className="main-nav-item" onClick={create}>
                         Create an Employee
                     </li>
