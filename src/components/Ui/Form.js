@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import ReactDatePicker from 'react-datepicker';
-// import ReactDropdown from 'react-dropdown';
+import "react-datepicker/dist/react-datepicker.css"
+import ReactDropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
-import allData from '@/data/states'
+import { allData } from '@/data/states'
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '@/feature/employeeSlice.slice';
-import ReactDropdown from 'react-dropdown';
+
 
 
 const Form = () => {
@@ -13,13 +15,14 @@ const Form = () => {
     const [credentials, setCredentials] = useState({
         firstName: '',
         lastName: '',
-        birthDate: '',
+        department: '',
         startDate: '',
+        birthDate: '',
         street: '',
         city: '',
         states: '',
         zipcode: '',
-        department: '',
+        modalVisible: false
     })
 
     const dispatch = useDispatch()
@@ -34,18 +37,19 @@ const Form = () => {
     const handleEdit = (e) => {
         e.preventDefault()
         const employee = {
-            // firstName,
-            // lastName,
-            // department,
-            // startDate,
-            // birthDate,
-            // street,
-            // city,
-            // states,
-            // zipcode,
+            //     firstName,
+            //     lastName,
+            //     department,
+            //     startDate,
+            //     birthDate,
+            //     street,
+            //     city,
+            //     states,
+            //     zipcode,
         }
 
         dispatch(addEmployee(employee))
+        // modalVisible : true
     }
 
     return (
@@ -92,17 +96,33 @@ const Form = () => {
                 </div>
 
                 <div className='formData'>
-                    <label className="form-label"> State </label>
-
+                    <label className="form-label"> State : <ReactDropdown
+                        options={allData.states.map((el) => ({
+                            label: el.name,
+                            value: el.abbreviation,
+                        }))}
+                        onChange={onChange}
+                        placeholder="Select a State"
+                    /> </label>
                 </div>
 
                 <div className='formData'>
                     <label className="form-label" for="zipcode">Zip Code: </label>
                     <input className="form-control" type="number" id="last" name="zipcode" placeholder='Zip Code' onChange={onChange} />
                 </div>
-
-
             </fieldset>
+
+            <div className='formData'>
+                <label className="form-label"> Department : <ReactDropdown
+                    options={allData.departements}
+                    onChange={onChange}
+                    placeholder="Select a department"
+                /> </label>
+            </div>
+
+            <div className="userButtons">
+                <button className="btn" onClick={handleEdit} type="button" >Save</button>
+            </div>
 
         </form>
     );
