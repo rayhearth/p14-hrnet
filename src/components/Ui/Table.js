@@ -48,13 +48,16 @@ const Table = () => {
 
     return (
         <div className='table'>
-            <MaterialReactTable
-                columns={columns}
-                data={employeesList}
-                enableRowSelection //enable some features
-                enableColumnOrdering
-                enableGlobalFilter={false} //turn off a feature
-            />
+            {employeesList ? (
+                <MaterialReactTable
+                    columns={columns}
+                    data={employeesList}
+                    enableRowSelection //enable some features
+                    enableColumnOrdering
+                    enableGlobalFilter={false} //turn off a feature
+                />) : (
+                <p>No data available in table</p>
+            )}
         </div>
     );
 };

@@ -1,13 +1,19 @@
 import React from 'react';
-import { Form } from 'react-router-dom';
 
 const Home = () => {
     return (
         <div className='home'>
-            <h1>Hello world</h1>
-            {/* <section className='form-container'>
-                <Form />
-            </section> */}
+            <div className='society'>
+                <img
+                    className="main-nav-logo-image"
+                    src={process.env.PUBLIC_URL + 'icon.svg'}
+                    alt="HRnet Logo"
+                />
+                <h1>HRnet</h1>
+            </div>
+            <div className='markdown-img'>
+                <img src={process.env.PUBLIC_URL + 'bg-home-hrnet.png'} alt="" />
+            </div>
         </div>
     );
 };

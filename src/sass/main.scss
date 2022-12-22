@@ -1,1 +1,9 @@
+@import "./utils/variables";
 @import "./base/reset";
+
+@import "./layout/_header";
+
+@import "./pages/error";
+@import "./pages/home";
+@import "./pages/createEmployee";
+@import "./pages/currentEmployee";

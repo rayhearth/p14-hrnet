@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../components/Ui/Form';
+import CreateForm from '@/components/Ui/CreateForm';
 
 const CreateEmployee = () => {
 
@@ -8,7 +8,7 @@ const CreateEmployee = () => {
     return (
         <div className='create-employee'>
             <h1>HRnet</h1>
-            <Form />
+            <CreateForm />
         </div>
     );
 };

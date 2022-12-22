@@ -1,0 +1,26 @@
+header {
+    margin: 0 auto;
+    .main-nav {
+        padding: 1.5rem 1.25rem;
+        a {
+            font-weight: bold;
+            color: $darkGreen;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1.75rem;
+            width: 100%;
+            li {
+                img {
+                    height: 100%;
+                    width: 6rem;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

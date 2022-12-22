@@ -23,11 +23,7 @@ const Header = () => {
             <nav className="main-nav">
                 <ul className='linkContent'>
                     <li className="main-nav-item" onClick={home}>
-                        <img
-                            className="main-nav-logo-image"
-                            src={process.env.PUBLIC_URL + 'icon.png'}
-                            alt="HRnet Logo"
-                        />
+                        Home
                     </li>
                     <li className="main-nav-item" onClick={create}>
                         Create an Employee
