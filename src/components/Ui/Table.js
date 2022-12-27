@@ -45,19 +45,14 @@ const Table = () => {
         [],
     )
 
-
     return (
         <div className='table'>
-            {employeesList ? (
-                <MaterialReactTable
-                    columns={columns}
-                    data={employeesList}
-                    enableRowSelection //enable some features
-                    enableColumnOrdering
-                    enableGlobalFilter={false} //turn off a feature
-                />) : (
-                <p>No data available in table</p>
-            )}
+            <MaterialReactTable
+                columns={columns}
+                data={employeesList}
+                enableFullScreenToggle={false}
+                enableDensityToggle={false}
+            />
         </div>
     );
 };

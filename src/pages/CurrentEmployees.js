@@ -4,7 +4,14 @@ import Table from '../components/Ui/Table';
 const CurrentEmployees = () => {
     return (
         <div className='currentEmployees'>
-            <h1>Current Employees</h1>
+            <div className="banner">
+                <img
+                    src={process.env.PUBLIC_URL + 'icon.svg'}
+                    alt="HRnet Logo"
+                    className='logo-banner' />
+                <h1>Current Employees</h1>
+
+            </div>
             <Table />
         </div>
     );
