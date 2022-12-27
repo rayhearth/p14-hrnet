@@ -73,6 +73,7 @@ const CreateForm = () => {
                 <label className="form-label" htmlFor="birth">Date of Birth:
                     <DatePicker
                         selected={birthDate}
+                        name='birth'
                         dateFormat='dd/MM/yyyy'
                         onChange={(date) => setbirthDate(date)}
                     />
@@ -92,6 +93,8 @@ const CreateForm = () => {
             </div>
 
             <fieldset className='adress-area'>
+
+                <h3 className="fieldset-title">Adress</h3>
 
                 <div className='formData'>
                     <label className="form-label" htmlFor="street">Street: </label>

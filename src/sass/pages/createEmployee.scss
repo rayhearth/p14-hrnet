@@ -9,9 +9,9 @@
     form {
         display: flex;
         flex-direction: column;
+        margin-top: 3rem;
         // align-items: center;
-        background-color: lighten($color: $greenlight, $amount: 55%);
-        border-radius: 1.25rem;
+        gap: 1.25rem;
         padding: 1.25rem;
         width: 40%;
         .formData {
@@ -24,16 +24,45 @@
                 text-align: left;
             }
             input {
-                width: 100%;
+                // width: 100%;
+                width: 31.25rem;
                 margin: 0.313rem 0;
                 text-align: left;
                 padding: 12px 8px;
                 border: 1px solid $border;
                 border-radius: 5px;
             }
-            // .react-datepicker-ignore-onclickoutside {
-            //     width: 100%;
-            // }
+        }
+        fieldset {
+            background-color: lighten($color: $greenlight, $amount: 55%);
+            border-radius: 1.25rem;
+            padding: 1.25rem;
+            border: none;
+            padding: 1.25rem 1rem;
+            .formData {
+                margin: 1.25rem 0;
+            }
+        }
+        .Dropdown-control {
+            width: 500px;
+            border-radius: 5px;
+            .Dropdown-placeholder {
+                text-align: left;
+            }
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: lighten($color: $greenlight, $amount: 55%);
+            font-weight: bold;
+            color: $darkGreen;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                background-color: $darkGreen;
+                color: white;
+            }
         }
     }
 }
