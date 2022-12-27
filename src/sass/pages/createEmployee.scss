@@ -1,0 +1,39 @@
+.create-employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 4rem;
+        height: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        background-color: lighten($color: $greenlight, $amount: 55%);
+        border-radius: 1.25rem;
+        padding: 1.25rem;
+        width: 40%;
+        .formData {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            label {
+                font-weight: bold;
+                text-align: left;
+            }
+            input {
+                width: 100%;
+                margin: 0.313rem 0;
+                text-align: left;
+                padding: 12px 8px;
+                border: 1px solid $border;
+                border-radius: 5px;
+            }
+            // .react-datepicker-ignore-onclickoutside {
+            //     width: 100%;
+            // }
+        }
+    }
+}

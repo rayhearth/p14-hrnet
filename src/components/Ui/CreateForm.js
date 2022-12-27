@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDatePicker from 'react-datepicker';
+import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -21,49 +21,21 @@ const CreateForm = () => {
     const [zipCode, setZipCode] = useState('')
     const [department, setDepartment] = useState('')
 
+    // const dateParser = (date) => {
+    //     let newDate = new Date(date).toLocaleDateString("fr-FR", {
+    //         year: 'numeric',
+    //         month: 'long',
+    //         day: 'numeric'
+    //     })
+    //     return newDate
+    // }
+
     const option = allData.states.map((el) => ({
         label: el.name,
         value: el.abbreviation,
     }))
 
-    // const [credentials, setCredentials] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     department: '',
-    //     startDate: '',
-    //     birthDate: '',
-    //     street: '',
-    //     city: '',
-    //     state: '',
-    //     zipcode: '',
-    //     modalVisible: false
-    // })
-
-
     const dispatch = useDispatch()
-
-    // const onChange = (e) => {
-    //     console.log(e);
-    //     if (e.target.hasOwnProperty('name')) {
-    //         setCredentials({
-    //             ...credentials,
-    //             [e.target.name]: e.target.value
-    //         })
-    //     } else {
-    //         setCredentials({
-    //             ...credentials,
-    //             [e.target.label]: e.target.value
-    //         })
-    //     }
-    // }
-
-    // const onChange = (e) => {
-    //     console.log(e);
-    //     setCredentials({
-    //         ...credentials,
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
 
     const handleEdit = (e) => {
         e.preventDefault()
@@ -99,9 +71,9 @@ const CreateForm = () => {
 
             <div className='formData'>
                 <label className="form-label" htmlFor="birth">Date of Birth:
-                    <ReactDatePicker
+                    <DatePicker
                         selected={birthDate}
-                        dateFormat='dd/mm/yyyy'
+                        dateFormat='dd/MM/yyyy'
                         onChange={(date) => setbirthDate(date)}
                     />
                 </label>
@@ -109,10 +81,10 @@ const CreateForm = () => {
 
             <div className='formData'>
                 <label className="form-label" htmlFor="start">Start Date:
-                    <ReactDatePicker
+                    <DatePicker
                         selected={startDate}
                         name='start'
-                        dateFormat='dd/mm/yyyy'
+                        dateFormat='dd/MM/yyyy'
                         onChange={(date) => setStartDate(date)}
                     />
                 </label>
@@ -139,11 +111,6 @@ const CreateForm = () => {
                         onChange={(e) => setState(e.value)}
                         placeholder='select a state'
                     />
-                    {/* <Select
-                        name='state'
-                        onChange={onchange}
-                        options={option}
-                    /> */}
                 </div>
 
                 <div className='formData'>
@@ -158,7 +125,6 @@ const CreateForm = () => {
                         options={allData.departements}
                         onChange={(e) => setDepartment(e.value)}
                         placeholder="Select a department"
-
                     />
                 </label>
 
