@@ -50,8 +50,8 @@ const Table = () => {
             <MaterialReactTable
                 columns={columns}
                 data={employeesList}
-                enableFullScreenToggle={false}
                 enableDensityToggle={false}
+                enableFullScreenToggle={false}
             />
         </div>
     );

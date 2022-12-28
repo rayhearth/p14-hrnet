@@ -7,6 +7,9 @@ import 'react-dropdown/style.css';
 import { allData } from '@/data/states'
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '@/feature/employeeSlice.slice';
+import { Modal } from '@rayhearth/react_modal';
+
+
 
 
 const CreateForm = () => {
@@ -20,15 +23,16 @@ const CreateForm = () => {
     const [state, setState] = useState('')
     const [zipCode, setZipCode] = useState('')
     const [department, setDepartment] = useState('')
+    const [modalActive, setModalActive] = useState('')
 
-    // const dateParser = (date) => {
-    //     let newDate = new Date(date).toLocaleDateString("fr-FR", {
-    //         year: 'numeric',
-    //         month: 'long',
-    //         day: 'numeric'
-    //     })
-    //     return newDate
-    // }
+    const dateParser = (date) => {
+        let newDate = new Date(date).toLocaleDateString("fr-FR", {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        })
+        return newDate
+    }
 
     const option = allData.states.map((el) => ({
         label: el.name,
@@ -39,106 +43,116 @@ const CreateForm = () => {
 
     const handleEdit = (e) => {
         e.preventDefault()
-        const employee = [
+        const employee = {
             firstName,
             lastName,
             department,
-            startDate,
-            birthDate,
+            startDate: dateParser(startDate),
+            birthDate: dateParser(birthDate),
             street,
             city,
             state,
             zipCode,
-        ]
+        }
 
         dispatch(addEmployee(employee))
-        // modalVisible : true
+        setModalActive(true)
+    }
+
+    const close = (e) => {
+        setModalActive(false)
     }
 
     return (
-        <form>
-            <h2>Create Employee</h2>
+        <div>
 
-            <div className='formData'>
-                <label className="form-label" htmlFor="firstName">First Name: </label>
-                <input className="form-control" type="text" id="first" name="firstName" placeholder='Firstname' onChange={(e) => setFirstName(e.target.value)} />
-            </div>
 
-            <div className='formData'>
-                <label className="form-label" htmlFor="lastName">Last Name: </label>
-                <input className="form-control" type="text" id="last" name="lastName" placeholder='Lastname' onChange={(e) => setLastName(e.target.value)} />
-            </div>
-
-            <div className='formData'>
-                <label className="form-label" htmlFor="birth">Date of Birth:
-                    <DatePicker
-                        selected={birthDate}
-                        name='birth'
-                        dateFormat='dd/MM/yyyy'
-                        onChange={(date) => setbirthDate(date)}
-                    />
-                </label>
-            </div>
-
-            <div className='formData'>
-                <label className="form-label" htmlFor="start">Start Date:
-                    <DatePicker
-                        selected={startDate}
-                        name='start'
-                        dateFormat='dd/MM/yyyy'
-                        onChange={(date) => setStartDate(date)}
-                    />
-                </label>
-
-            </div>
-
-            <fieldset className='adress-area'>
-
-                <h3 className="fieldset-title">Adress</h3>
+            <form>
+                <h2>Create Employee</h2>
 
                 <div className='formData'>
-                    <label className="form-label" htmlFor="street">Street: </label>
-                    <input className="form-control" type="text" id="last" name="street" placeholder='Street' onChange={(e) => setStreet(e.target.value)} />
+                    <label className="form-label" htmlFor="firstName">First Name: </label>
+                    <input className="form-control" type="text" id="first" name="firstName" placeholder='Firstname' onChange={(e) => setFirstName(e.target.value)} />
                 </div>
 
                 <div className='formData'>
-                    <label className="form-label" htmlFor="city">City: </label>
-                    <input className="form-control" type="text" id="last" name="city" placeholder='City' onChange={(e) => setCity(e.target.value)} />
+                    <label className="form-label" htmlFor="lastName">Last Name: </label>
+                    <input className="form-control" type="text" id="last" name="lastName" placeholder='Lastname' onChange={(e) => setLastName(e.target.value)} />
                 </div>
 
                 <div className='formData'>
-                    <label className="form-label" htmlFor="state"> State :
+                    <label className="form-label" htmlFor="birth">Date of Birth:
+                        <DatePicker
+                            selected={birthDate}
+                            name='birth'
+                            dateFormat='dd/MM/yyyy'
+                            onChange={(date) => setbirthDate(date)}
+                        />
                     </label>
-                    <Dropdown
-                        options={option}
-                        onChange={(e) => setState(e.value)}
-                        placeholder='select a state'
-                    />
                 </div>
 
                 <div className='formData'>
-                    <label className="form-label" htmlFor="zipcode">Zip Code: </label>
-                    <input className="form-control" type="number" id="last" name="zipcode" placeholder='Zip Code' onChange={(e) => setZipCode(e.target.value)} />
+                    <label className="form-label" htmlFor="start">Start Date:
+                        <DatePicker
+                            selected={startDate}
+                            name='start'
+                            dateFormat='dd/MM/yyyy'
+                            onChange={(date) => setStartDate(date)}
+                        />
+                    </label>
+
                 </div>
-            </fieldset>
 
-            <div className='formData'>
-                <label className="form-label" htmlFor='department'> Department :
-                    <Dropdown
-                        options={allData.departements}
-                        onChange={(e) => setDepartment(e.value)}
-                        placeholder="Select a department"
-                    />
-                </label>
+                <fieldset className='adress-area'>
 
-            </div>
+                    <h3 className="fieldset-title">Adress</h3>
+
+                    <div className='formData'>
+                        <label className="form-label" htmlFor="street">Street: </label>
+                        <input className="form-control" type="text" id="last" name="street" placeholder='Street' onChange={(e) => setStreet(e.target.value)} />
+                    </div>
+
+                    <div className='formData'>
+                        <label className="form-label" htmlFor="city">City: </label>
+                        <input className="form-control" type="text" id="last" name="city" placeholder='City' onChange={(e) => setCity(e.target.value)} />
+                    </div>
+
+                    <div className='formData'>
+                        <label className="form-label" htmlFor="state"> State :
+                        </label>
+                        <Dropdown
+                            options={option}
+                            onChange={(e) => setState(e.value)}
+                            placeholder='select a state'
+                        />
+                    </div>
+
+                    <div className='formData'>
+                        <label className="form-label" htmlFor="zipcode">Zip Code: </label>
+                        <input className="form-control" type="number" id="last" name="zipcode" placeholder='Zip Code' onChange={(e) => setZipCode(e.target.value)} />
+                    </div>
+                </fieldset>
+
+                <div className='formData'>
+                    <label className="form-label" htmlFor='department'> Department :
+                        <Dropdown
+                            options={allData.departements}
+                            onChange={(e) => setDepartment(e.value)}
+                            placeholder="Select a department"
+                        />
+                    </label>
+
+                </div>
 
 
-            <div className="userButtons">
-                <button className="btn" onClick={handleEdit} type="button" >Save</button>
-            </div>
-
-        </form>
+                <div className="userButtons">
+                    <button className="btn" onClick={handleEdit} type="button" >Save</button>
+                </div>
+            </form>
+            {modalActive && (
+                <Modal message={"Employee sucessfully created !"} onClick={close} />
+            )}
+        </div>
     );
 };
 
