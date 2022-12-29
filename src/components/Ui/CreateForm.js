@@ -59,14 +59,13 @@ const CreateForm = () => {
         setModalActive(true)
     }
 
-    const close = (e) => {
+    const handleClose = (e) => {
+        console.log(e);
         setModalActive(false)
     }
 
     return (
-        <div>
-
-
+        <div className="form-employee">
             <form>
                 <h2>Create Employee</h2>
 
@@ -150,7 +149,7 @@ const CreateForm = () => {
                 </div>
             </form>
             {modalActive && (
-                <Modal message={"Employee sucessfully created !"} onClick={close} />
+                <Modal message={"Employee sucessfully created !"} close={handleClose} />
             )}
         </div>
     );
