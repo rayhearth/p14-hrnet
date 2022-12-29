@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Table = () => {
 
-    //on stocke ds une variable profileData l'ensemble de notre store
+    //on stocke ds une variable employeesList l'ensemble de notre store
     const employeesList = useSelector((state) => state.employee.employees)
 
     //simple column definitions pointing to flat data
