@@ -9,7 +9,7 @@ Objectifs :
 
 ##Plugins existants utilisés
 
-*Dropdown [src :https://www.npmjs.com/package/react-dropdown(https://www.npmjs.com/package/react-dropdown)]
+*Dropdown src :https://www.npmjs.com/package/react-dropdown
 *Date-picker (src : https://www.npmjs.com/package/react-datepicker )
 *React table (src : https://www.material-react-table.com)
 
