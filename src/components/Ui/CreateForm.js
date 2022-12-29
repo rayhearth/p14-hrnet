@@ -146,7 +146,7 @@ const CreateForm = () => {
 
 
                 <div className="userButtons">
-                    <button className="btn" onClick={handleEdit} type="button" >Save</button>
+                    <button className="btn" onClick={handleEdit} type="submit" >Save</button>
                 </div>
             </form>
             {modalActive && (
