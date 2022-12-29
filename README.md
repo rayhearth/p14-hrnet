@@ -3,10 +3,6 @@
 
 Welcome to HRnet! This is our company's internal application to create and view employee records.
 
-Objectifs :
-* Convertir l'ensemble du projet HRNet en React.
-* Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React existants, coder et publier le dernier soit-même.
-* Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
 
 ##Plugins downloaded
 
@@ -20,7 +16,7 @@ React Modal (src: https://www.npmjs.com/package/@rayhearth/react_modal)
 
 ### Installation
 
-Fork and clone the repository 
+Fork and clone the repository (src:https://github.com/rayhearth/p14-hrnet)
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
