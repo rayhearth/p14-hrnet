@@ -6,13 +6,13 @@ Welcome to HRnet! This is our company's internal application to create and view 
 
 ##Plugins downloaded
 
-* Dropdown (src :https://www.npmjs.com/package/react-dropdown)
-* Date-picker (src : https://www.npmjs.com/package/react-datepicker )
-* React table (src : https://www.material-react-table.com)
+* Dropdown (https://www.npmjs.com/package/react-dropdown)
+* Date-picker (https://www.npmjs.com/package/react-datepicker )
+* React table (https://www.material-react-table.com)
 
 ##Plugin editing by our society
 
-React Modal (src: https://www.npmjs.com/package/@rayhearth/react_modal)
+React Modal (https://www.npmjs.com/package/@rayhearth/react_modal)
 
 ### Installation
 
