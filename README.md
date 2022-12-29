@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Projet 14 - HRnet  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Simplon.co](https://github.com/rayhearth/p14-hrnet/blob/master/public/logo.png)
 
-## Available Scripts
+Welcome to HRnet! This is our company's internal application to create and view employee records.  
 
-In the project directory, you can run:
 
-### `npm start`
+## Plugins downloaded  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Dropdown (https://www.npmjs.com/package/react-dropdown)  
+* Date-picker (https://www.npmjs.com/package/react-datepicker ) 
+* React table (https://www.material-react-table.com)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Plugin editing by our society  
 
-### `npm test`
+React Modal (https://www.npmjs.com/package/@rayhearth/react_modal)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation  
 
-### `npm run build`
+Fork and clone the repository :https://github.com/rayhearth/p14-hrnet  
+install all dependencies with _npm i_  
+launch project with the command : _npm run starto_  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Required dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* "@craco/craco": "^7.0.0-alpha.9",
+* "@rayhearth/react_modal": "^0.1.5",
+* "@reduxjs/toolkit": "^1.9.1",
+* "material-react-table": "^1.5.0",
+* "react": "^18.2.0",
+* "react-datepicker": "^4.8.0",
+* "react-dom": "^18.2.0",
+* "react-dropdown": "^1.11.0",
+* "react-redux": "^8.0.5",
+* "react-router-dom": "^6.4.5",
+* "react-scripts": "5.0.1",
+* "redux": "^4.2.0",
+* "redux-devtools-extension": "^2.13.9",
+* "redux-thunk": "^2.4.2",
+* "sass": "^1.56.2",
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Purpose
 
-### `npm run eject`
+This project consists of migrating an internal web application, called HRnet, which manages employee files. The application is old and uses jQuery on the front end.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Goals :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Convert the entire HRNet project to React.
+* Convert one of the four current jQuery plugins to React. Replace the remaining 3 jQuery plugins with existing React components, code and publish the last one yourself.
+* Perform Lighthouse benchmarks comparing the old and new app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
