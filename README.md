@@ -1,6 +1,6 @@
 # Projet 14 - HRnet  
 
-![Simplon.co](http://simplon.co/wp-content/uploads/2015/04/if-coder-keep-coding-else-learn-with-simplon-2-600x675.png)
+![Simplon.co](https://github.com/rayhearth/p14-hrnet/blob/master/public/logo.png)
 
 Welcome to HRnet! This is our company's internal application to create and view employee records.  
 
