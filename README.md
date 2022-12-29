@@ -1,23 +1,26 @@
-# Projet 14 - Migrer une librairie jQuery vers React
+# Projet 14 - HRnet
 
-Ce projet consiste a migrer une application web interne, appelée HRnet, qui gère les dossiers des employés. L'application est ancienne et utilise jQuery côté front end.
+
+Welcome to HRnet! This is our company's internal application to create and view employee records.
 
 Objectifs :
 * Convertir l'ensemble du projet HRNet en React.
 * Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React existants, coder et publier le dernier soit-même.
 * Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
 
-##Plugins existants utilisés
+##Plugins downloaded
 
 * Dropdown (src :https://www.npmjs.com/package/react-dropdown)
 * Date-picker (src : https://www.npmjs.com/package/react-datepicker )
 * React table (src : https://www.material-react-table.com)
 
-## Available Scripts
+##Plugin editing by our society
 
-In the project directory, you can run:
+React Modal (src: https://www.npmjs.com/package/@rayhearth/react_modal)
 
-### `npm start`
+### Installation
+
+Fork and clone the repository 
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
