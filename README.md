@@ -23,4 +23,29 @@ launch project with the command : _npm run starto_
 
 ## Required dependencies
 
-https://forthebadge.com/images/badges/fuck-it-ship-it.svg
+* "@craco/craco": "^7.0.0-alpha.9",
+* "@rayhearth/react_modal": "^0.1.5",
+* "@reduxjs/toolkit": "^1.9.1",
+* "material-react-table": "^1.5.0",
+* "react": "^18.2.0",
+* "react-datepicker": "^4.8.0",
+* "react-dom": "^18.2.0",
+* "react-dropdown": "^1.11.0",
+* "react-redux": "^8.0.5",
+* "react-router-dom": "^6.4.5",
+* "react-scripts": "5.0.1",
+* "redux": "^4.2.0",
+* "redux-devtools-extension": "^2.13.9",
+* "redux-thunk": "^2.4.2",
+* "sass": "^1.56.2",
+
+##Purpose
+
+This project consists of migrating an internal web application, called HRnet, which manages employee files. The application is old and uses jQuery on the front end.
+
+Goals :
+
+* Convert the entire HRNet project to React.
+* Convert one of the four current jQuery plugins to React. Replace the remaining 3 jQuery plugins with existing React components, code and publish the last one yourself.
+* Perform Lighthouse benchmarks comparing the old and new app.
+
