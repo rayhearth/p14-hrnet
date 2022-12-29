@@ -39,7 +39,7 @@ launch project with the command : _npm run starto_
 * "redux-thunk": "^2.4.2",
 * "sass": "^1.56.2",
 
-##Purpose
+## Purpose
 
 This project consists of migrating an internal web application, called HRnet, which manages employee files. The application is old and uses jQuery on the front end.
 
