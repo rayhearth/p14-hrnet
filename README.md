@@ -3,15 +3,15 @@
 Ce projet consiste a migrer une application web interne, appelée HRnet, qui gère les dossiers des employés. L'application est ancienne et utilise jQuery côté front end.
 
 Objectifs :
-*Convertir l'ensemble du projet HRNet en React.
-*Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React existants, coder et publier le dernier soit-même.
-*Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
+* Convertir l'ensemble du projet HRNet en React.
+* Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React existants, coder et publier le dernier soit-même.
+* Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
 
 ##Plugins existants utilisés
 
-*Dropdown src :https://www.npmjs.com/package/react-dropdown
-*Date-picker (src : https://www.npmjs.com/package/react-datepicker )
-*React table (src : https://www.material-react-table.com)
+* Dropdown (src :https://www.npmjs.com/package/react-dropdown)
+* Date-picker (src : https://www.npmjs.com/package/react-datepicker )
+* React table (src : https://www.material-react-table.com)
 
 ## Available Scripts
 
