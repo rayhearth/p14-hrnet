@@ -1,7 +1,6 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Router from '@/pages/Router'
+import Router from './pages/Router'
 
 function App() {
   return (

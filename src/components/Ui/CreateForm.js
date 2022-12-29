@@ -4,9 +4,9 @@ import "react-datepicker/dist/react-datepicker.css"
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import { allData } from '@/data/states'
+import { allData } from '../../data/states'
 import { useDispatch } from 'react-redux';
-import { addEmployee } from '@/feature/employeeSlice.slice';
+import { addEmployee } from '../../feature/employeeSlice.slice';
 import { Modal } from '@rayhearth/react_modal';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateForm from '@/components/Ui/CreateForm';
+import CreateForm from '../components/Ui/CreateForm';
 
 const CreateEmployee = () => {
 

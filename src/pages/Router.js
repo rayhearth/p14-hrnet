@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
-import { Layout, Home, CreateEmployee, CurrentEmployees } from '@/pages'
-import Error from '@/_utils/Error'
+import { Layout, Home, CreateEmployee, CurrentEmployees } from '../pages/index'
+import Error from '../_utils/Error'
 
 const Router = () => {
     return (
