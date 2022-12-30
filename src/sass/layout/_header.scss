@@ -1,5 +1,6 @@
 header {
     margin: 0 auto;
+    background-color: $darkGreen;
     .main-nav {
         padding: 1.5rem 1.25rem;
         a {
@@ -13,12 +14,23 @@ header {
             gap: 1.75rem;
             width: 100%;
             li {
+                cursor: pointer;
+                font-weight: bold;
+                color: white;
                 img {
                     height: 100%;
                     width: 6rem;
                 }
-                &:hover {
-                    text-decoration: underline;
+                &::after {
+                    display: block;
+                    content: "";
+                    border-bottom: solid 1px white;
+                    transform: scaleX(0);
+                    transition: transform 250ms ease-in-out;
+                }
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: 0% 50%;
                 }
             }
         }
