@@ -12,7 +12,7 @@ const Home = () => {
                 <h1>HRnet</h1>
             </div>
             <div className='markdown-img'>
-                <img src={process.env.PUBLIC_URL + 'bg-home-hrnet.png'} alt="" />
+                <img src={process.env.PUBLIC_URL + 'bg-home-hrnet.webp'} alt="" />
             </div>
         </div>
     );

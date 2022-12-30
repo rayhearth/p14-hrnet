@@ -28,7 +28,7 @@ const CreateForm = () => {
     const dateParser = (date) => {
         let newDate = new Date(date).toLocaleDateString("fr-FR", {
             year: 'numeric',
-            month: 'long',
+            month: 'numeric',
             day: 'numeric'
         })
         return newDate
