@@ -13,8 +13,8 @@
       "sizes": "192x192"
     },
     {
-      "src": "icon.svg",
-      "type": "image/svg",
+      "src": "hrnet-icon.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
