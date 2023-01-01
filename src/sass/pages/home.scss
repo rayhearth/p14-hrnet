@@ -15,6 +15,10 @@
         }
     }
     .markdown-img {
-        aspect-ratio: auto 640 / 360;
+        width: 50%;
+        img {
+            min-width: 12rem;
+            width: 100%;
+        }
     }
 }
