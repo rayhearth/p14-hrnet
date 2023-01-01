@@ -6,7 +6,7 @@ const Home = () => {
             <div className='society'>
                 <img
                     className="main-nav-logo-image"
-                    src={process.env.PUBLIC_URL + 'icon.svg'}
+                    src={process.env.PUBLIC_URL + 'logo.svg'}
                     alt="HRnet Logo"
                 />
                 <h1>HRnet</h1>

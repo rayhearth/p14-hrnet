@@ -6,7 +6,7 @@ const CurrentEmployees = () => {
         <div className='currentEmployees'>
             <div className="banner">
                 <img
-                    src={process.env.PUBLIC_URL + 'icon.svg'}
+                    src={process.env.PUBLIC_URL + 'logo.svg'}
                     alt="HRnet Logo"
                     className='logo-banner' />
                 <h1>Current Employees</h1>

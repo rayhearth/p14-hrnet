@@ -9,7 +9,7 @@ const CreateEmployee = () => {
         <div className='create-employee'>
             <div className="banner">
                 <img
-                    src={process.env.PUBLIC_URL + 'icon.svg'}
+                    src={process.env.PUBLIC_URL + 'logo.svg'}
                     alt="HRnet Logo"
                     className='logo-banner' />
                 <h1>HRnet</h1>
