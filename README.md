@@ -1,6 +1,7 @@
 # Projet 14 - HRnet  
 
 ![Simplon.co](https://github.com/rayhearth/p14-hrnet/blob/master/public/logo.svg)
+<img src="https://github.com/rayhearth/p14-hrnet/blob/master/public/logo.svg" width="60px"></img>
 
 Welcome to HRnet! This is our company's internal application to create and view employee records.  
 
